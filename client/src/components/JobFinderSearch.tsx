@@ -123,7 +123,7 @@ export default function JobFinderSearch({ services }: JobFinderSearchProps) {
               <a href="tel:4254429328" className="block">
                 <Button variant="default" size="default" className="w-full bg-accent text-accent-foreground border border-accent-border" data-testid={`button-job-call-${index}`}>
                   <Phone className="w-4 h-4" />
-                  Call 425-442-9328
+                  Call
                 </Button>
               </a>
             </Card>
@@ -136,7 +136,7 @@ export default function JobFinderSearch({ services }: JobFinderSearchProps) {
             <a href="tel:4254429328">
               <Button size="lg" variant="default" className="bg-accent text-accent-foreground border border-accent-border" data-testid="button-no-results-call">
                 <Phone className="w-5 h-5" />
-                Call 425-442-9328
+                Call
               </Button>
             </a>
           </div>
