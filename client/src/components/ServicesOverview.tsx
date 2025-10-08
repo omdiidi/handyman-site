@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { Wrench, Tv, Package, Paintbrush, Droplet, Zap, Hammer, Sparkles, Home } from "lucide-react";
+import { Wrench, Tv, Package, Paintbrush, Droplet, Zap, Hammer, Sparkles, Home, Search } from "lucide-react";
 
 const services = [
   {
@@ -59,8 +59,9 @@ export default function ServicesOverview() {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="text-services-title">
             What I do
           </h2>
-          <Link href="/job-finder">
+          <Link href="/job-finder?focus=true">
             <Button variant="outline" data-testid="button-browse-all-services">
+              <Search className="w-4 h-4" />
               Browse all services
             </Button>
           </Link>

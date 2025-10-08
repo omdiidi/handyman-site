@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
@@ -16,6 +16,14 @@ interface JobFinderSearchProps {
 
 export default function JobFinderSearch({ services }: JobFinderSearchProps) {
   const [searchQuery, setSearchQuery] = useState("");
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('focus') === 'true') {
+      searchInputRef.current?.focus();
+    }
+  }, []);
 
   const filteredServices = services.filter((service) => {
     const query = searchQuery.toLowerCase();
@@ -37,6 +45,7 @@ export default function JobFinderSearch({ services }: JobFinderSearchProps) {
         <div className="relative max-w-2xl mx-auto">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
           <Input
+            ref={searchInputRef}
             type="search"
             placeholder="Search for a service... (e.g., 'drywall', 'TV mount', 'faucet')"
             value={searchQuery}
