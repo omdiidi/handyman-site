@@ -176,11 +176,8 @@ export default function JobFinder() {
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="text-job-finder-title">
             Find Your Service
           </h1>
-          <p className="text-muted-foreground mb-2" data-testid="text-job-finder-subtitle">
+          <p className="text-muted-foreground" data-testid="text-job-finder-subtitle">
             Search repairs, installs, painting, plumbing, and more
-          </p>
-          <p className="text-sm text-muted-foreground" data-testid="text-service-count">
-            {services.length} services available
           </p>
         </div>
         
