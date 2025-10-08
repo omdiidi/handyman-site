@@ -7,14 +7,21 @@ export default function About() {
       <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6" data-testid="text-about-title">
-            Meet Reza
+            Hi, I'm Reza
           </h1>
           
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-lg max-w-none text-left">
             <p className="text-lg text-foreground leading-relaxed mb-6" data-testid="text-about-bio">
-              I run Rez The Builder LLC, a local handyman and contractor serving Redmond and the Eastside. 
-              Homeowners call me for clean, careful work and clear communication. With 200+ 5-star reviews, 
-              I keep projects simple and stress-free. If it's on your to-do list, I can likely take care of it.
+              I'm the owner of Rez The Builder LLC. For over 10 years, I've been helping clients across Redmond, Bellevue, Kirkland, Issaquah, and Sammamish with reliable handyman and contractor work.
+            </p>
+            <p className="text-lg text-foreground leading-relaxed mb-6">
+              When you call me, you're not talking to a big company — you're speaking directly with me. I take pride in clean, careful work and clear, honest communication every step of the way. My goal is to make sure the job gets done right and without any stress.
+            </p>
+            <p className="text-lg text-foreground leading-relaxed mb-6">
+              With 200+ 5-star reviews, most of my work comes from referrals and repeat customers who know they can count on me. Whether it's a repair, installation, or maintenance project, I'll make it simple to get done and done well.
+            </p>
+            <p className="text-lg text-foreground leading-relaxed mb-6">
+              If you're not sure where to start, just give me a call at 425-442-9328 — I'll walk you through your best options and help you get it handled quickly.
             </p>
           </div>
 
