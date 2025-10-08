@@ -6,48 +6,48 @@ import { Wrench, Tv, Package, Paintbrush, Droplet, Zap, Hammer, Sparkles, Home, 
 const services = [
   {
     icon: Wrench,
-    title: "Repairs",
-    description: "Drywall, doors, cabinets, fences, decks, siding, tile, grout, leaks, toilets, screens, small wood rot",
-  },
-  {
-    icon: Tv,
-    title: "Install and Mount",
-    description: "TVs, soundbars, lights, fans, shelves, pictures, curtains, smart home, doorbells, thermostats, locks, grab bars",
-  },
-  {
-    icon: Package,
-    title: "Assembly",
-    description: "Furniture, beds, desks, bookshelves, exercise gear, outdoor sets, sheds, playsets",
-  },
-  {
-    icon: Paintbrush,
-    title: "Paint and Finish",
-    description: "Interior, exterior trim, touch ups, caulking, deck and fence stain, grout seal",
+    title: "Drywall & Repairs",
+    description: "Fixing holes, cracks, and dents in walls and ceilings. Repairing tile and grout, doors that stick, cabinet hinges and drawers, window screens, and addressing small wood rot issues throughout your home.",
   },
   {
     icon: Droplet,
-    title: "Light Plumbing",
-    description: "Faucets, toilets, disposals, shower heads, drains, minor leaks, dishwashers",
+    title: "Plumbing Services",
+    description: "Installing and repairing faucets, sinks, and toilets. Fixing leaks, replacing shower heads, and handling light plumbing tasks in kitchens and bathrooms to keep your water flowing smoothly.",
   },
   {
     icon: Zap,
-    title: "Light Electrical",
-    description: "Fixtures, fans, outlets, switches, dimmers, detectors, outdoor lights",
+    title: "Electrical Work",
+    description: "Installing light fixtures, ceiling fans, outlets, and switches. Setting up smart home devices like Ring doorbells, smart locks, and thermostats. Replacing outdoor lighting and adding dimmers where needed.",
   },
   {
-    icon: Hammer,
-    title: "Carpentry",
-    description: "Trim, hardware, stairs and rails, small shelves",
+    icon: Paintbrush,
+    title: "Painting & Finishing",
+    description: "Clean, even painting for interior walls, ceilings, and trim. Exterior painting for doors, fences, and small surfaces. Plus caulking, re-caulking, deck and fence staining, and grout sealing for a polished finish.",
+  },
+  {
+    icon: Tv,
+    title: "Installation & Mounting",
+    description: "Mounting pictures, mirrors, and artwork securely and level. Installing mailboxes, pet doors, weatherstripping, and handrails. Setting up all types of fixtures and home improvements.",
+  },
+  {
+    icon: Package,
+    title: "Furniture Assembly",
+    description: "Building desks, bed frames, shelves, and outdoor furniture sets from flat-pack kits. Quick, correct assembly of IKEA and other furniture so you can start using it right away.",
   },
   {
     icon: Sparkles,
-    title: "Outdoor & Maintenance",
-    description: "Pressure wash, gutters, deck cleaning, soffit and fascia, weatherstrip, holiday lights",
+    title: "Outdoor Services",
+    description: "Pressure washing decks, driveways, siding, and patios. Cleaning gutters and clearing downspouts. Deck repair, cleaning, and sealing. Holiday light installation and removal for homes and small commercial spaces.",
+  },
+  {
+    icon: Hammer,
+    title: "Carpentry & Trim",
+    description: "Installing and repairing interior trim, baseboards, and door casings for a neat finish. Tightening handrails and securing stairs for safety. Quality carpentry work that enhances your home's appearance.",
   },
   {
     icon: Home,
-    title: "General Help",
-    description: "Home repairs, property care, honey do lists, odd jobs, baby proofing, home sale prep",
+    title: "General Services",
+    description: "Fence and gate repairs, odd jobs, custom requests, regular home and property maintenance, and home sale preparation. Whatever's on your to-do list, we'll help you check it off.",
   },
 ];
 
