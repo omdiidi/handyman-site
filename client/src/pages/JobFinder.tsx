@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import JobFinderSearch from "@/components/JobFinderSearch";
 
 const services = [
@@ -169,6 +170,10 @@ const services = [
 ];
 
 export default function JobFinder() {
+  useEffect(() => {
+    document.title = "Find your service - Rez The Builder LLC";
+  }, []);
+
   return (
     <div className="min-h-screen bg-background py-8">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
