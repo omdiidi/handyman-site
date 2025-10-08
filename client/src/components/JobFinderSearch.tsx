@@ -59,32 +59,79 @@ export default function JobFinderSearch({ services }: JobFinderSearchProps) {
     return () => clearTimeout(timer);
   }, [searchQuery]);
 
-  const filteredServices = services.filter((service) => {
-    if (!debouncedQuery.trim()) return true;
-    
-    const query = normalize(debouncedQuery);
+  // Calculate match score for sorting
+  const getMatchScore = (service: Service, query: string): number => {
     const serviceName = normalize(service.name);
     const serviceDesc = normalize(service.desc);
     
-    // Priority 1: Exact name match
-    if (serviceName.includes(query)) return true;
+    // Exact name match - highest priority
+    if (serviceName.includes(query)) return 100;
     
-    // Priority 2: Tag match (includes synonyms)
-    if (service.tags.some((tag) => normalize(tag).includes(query))) return true;
+    // Tag match
+    if (service.tags.some((tag) => normalize(tag).includes(query))) return 80;
     
-    // Priority 3: Description match
-    if (serviceDesc.includes(query)) return true;
+    // Description match
+    if (serviceDesc.includes(query)) return 60;
     
-    // Priority 4: Fuzzy match on name or tags
-    if (fuzzyMatch(serviceName, query)) return true;
-    if (service.tags.some((tag) => fuzzyMatch(tag, query))) return true;
+    // Fuzzy match on name
+    if (fuzzyMatch(serviceName, query)) return 40;
     
-    return false;
-  });
+    // Fuzzy match on tags
+    if (service.tags.some((tag) => fuzzyMatch(tag, query))) return 20;
+    
+    // Partial keyword match (for closest matches)
+    const queryWords = query.split(/\s+/);
+    let partialScore = 0;
+    queryWords.forEach(word => {
+      if (serviceName.includes(word) || service.tags.some(tag => normalize(tag).includes(word))) {
+        partialScore += 10;
+      }
+    });
+    if (partialScore > 0) return partialScore;
+    
+    return 0;
+  };
+
+  const filteredServices = !debouncedQuery.trim() 
+    ? services 
+    : services
+        .map((service, index) => ({
+          service,
+          score: getMatchScore(service, normalize(debouncedQuery)),
+          originalIndex: index
+        }))
+        .filter(item => item.score > 0)
+        .sort((a, b) => {
+          // Sort by score first, then by original index to maintain order
+          if (b.score !== a.score) return b.score - a.score;
+          return a.originalIndex - b.originalIndex;
+        })
+        .map(item => item.service);
+
+  // For uncertain/no matches, get top 3 closest matches
+  const hasExactMatch = debouncedQuery.trim() && filteredServices.length > 0;
+  const showClosestMatches = debouncedQuery.trim() && filteredServices.length === 0;
+  
+  const closestMatches = showClosestMatches
+    ? services
+        .map((service, index) => ({
+          service,
+          score: getMatchScore(service, normalize(debouncedQuery)),
+          originalIndex: index
+        }))
+        .sort((a, b) => {
+          if (b.score !== a.score) return b.score - a.score;
+          return a.originalIndex - b.originalIndex;
+        })
+        .slice(0, 3)
+        .map(item => item.service)
+    : [];
 
   const handleSearch = (value: string) => {
     setSearchQuery(value);
   };
+
+  const displayServices = showClosestMatches ? closestMatches : filteredServices;
 
   return (
     <div className="space-y-6">
@@ -103,45 +150,61 @@ export default function JobFinderSearch({ services }: JobFinderSearchProps) {
             data-testid="input-job-search"
           />
         </div>
-        {debouncedQuery && (
+        {debouncedQuery && hasExactMatch && (
           <p className="text-center mt-4 text-sm text-muted-foreground" data-testid="text-results-count">
             {filteredServices.length} {filteredServices.length === 1 ? "service" : "services"} found
+          </p>
+        )}
+        {showClosestMatches && (
+          <p className="text-center mt-4 text-sm text-muted-foreground" data-testid="text-closest-matches">
+            Here are the closest matches
           </p>
         )}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filteredServices.length > 0 ? (
-          filteredServices.map((service, index) => (
-            <Card key={index} className="p-6 flex flex-col" data-testid={`card-job-${index}`}>
-              <h3 className="text-lg font-semibold text-foreground mb-2" data-testid={`text-job-name-${index}`}>
-                {service.name}
-              </h3>
-              <p className="text-sm text-muted-foreground mb-4 flex-grow" data-testid={`text-job-desc-${index}`}>
-                {service.desc}
-              </p>
-              <a href="tel:4254429328" className="block">
-                <Button variant="default" size="default" className="w-full bg-accent text-accent-foreground border border-accent-border" data-testid={`button-job-call-${index}`}>
-                  <Phone className="w-4 h-4" />
-                  Call
-                </Button>
-              </a>
-            </Card>
-          ))
-        ) : (
-          <div className="col-span-full text-center py-12">
-            <p className="text-xl text-foreground mb-4" data-testid="text-no-results">
-              Yes, I can likely help.
+        {displayServices.map((service, index) => (
+          <Card key={index} className="p-6 flex flex-col" data-testid={`card-job-${index}`}>
+            <h3 className="text-lg font-semibold text-foreground mb-2" data-testid={`text-job-name-${index}`}>
+              {service.name}
+            </h3>
+            <p className="text-sm text-muted-foreground mb-4 flex-grow" data-testid={`text-job-desc-${index}`}>
+              {service.desc}
             </p>
-            <a href="tel:4254429328">
-              <Button size="lg" variant="default" className="bg-accent text-accent-foreground border border-accent-border" data-testid="button-no-results-call">
-                <Phone className="w-5 h-5" />
-                Call
+            <a href="tel:4254429328" className="block">
+              <Button variant="default" size="default" className="w-full bg-accent text-accent-foreground border border-accent-border" data-testid={`button-job-call-${index}`}>
+                <Phone className="w-4 h-4" />
+                Call to discuss
               </Button>
             </a>
-          </div>
+          </Card>
+        ))}
+        
+        {showClosestMatches && (
+          <Card className="p-8 flex flex-col items-center justify-center text-center md:col-span-2 lg:col-span-3" data-testid="card-cant-find">
+            <p className="text-lg font-semibold text-foreground mb-4" data-testid="text-cant-find">
+              Can't find what you're looking for?
+            </p>
+            <a href="tel:4254429328">
+              <Button size="lg" variant="default" className="bg-accent text-accent-foreground border border-accent-border" data-testid="button-cant-find-call">
+                <Phone className="w-5 h-5" />
+                Call to discuss
+              </Button>
+            </a>
+          </Card>
         )}
       </div>
+
+      {!debouncedQuery && (
+        <div className="fixed bottom-4 right-4 z-30 hidden md:block">
+          <a href="tel:4254429328">
+            <Button size="lg" variant="default" className="bg-accent text-accent-foreground border border-accent-border shadow-lg" data-testid="button-fixed-call">
+              <Phone className="w-5 h-5" />
+              Call to discuss
+            </Button>
+          </a>
+        </div>
+      )}
     </div>
   );
 }
