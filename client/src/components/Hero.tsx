@@ -1,4 +1,4 @@
-import { Phone, CheckCircle } from "lucide-react";
+import { Phone, CheckCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useState, useEffect } from "react";
@@ -89,6 +89,15 @@ export default function Hero() {
             <CheckCircle className="w-4 h-4" />
             Insured
           </Badge>
+        </div>
+        
+        <div className="flex items-center justify-center gap-2 mt-4" data-testid="rating-display">
+          <div className="flex gap-1">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+            ))}
+          </div>
+          <span className="text-white/95 font-semibold">5.0 (200+ reviews)</span>
         </div>
       </div>
     </section>
