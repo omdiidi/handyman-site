@@ -1,0 +1,81 @@
+Here’s a clean continuation you can paste right after your existing line to guide Replit. It keeps your order, uses smart matching, and pushes calls only.
+
+remake the find your service section to have all this info and a simple call to discuss button thats clearly there, have the stuff in order from my list top to bottom on the webstie. have the search be smart and find
+
+Use the provided services index as the single source of truth. Keep the on-page order exactly as given in my list from top to bottom.
+
+Search input behavior
+
+Match on keywords, synonyms, and partial words with basic fuzzy tolerance for typos.
+
+Support plural and common variants, like tv vs television, faucet vs tap, outlet vs plug, caulk vs caulking, fence post vs post replacement.
+
+Prioritize matches in this order: exact name match, tag match, synonym match, partial match.
+
+If multiple items match, sort results by my original list order, not alphabetically.
+
+Debounce input so results update after the user stops typing for a short moment.
+
+Matching rules
+
+Tokenize the query, lowercase, strip punctuation.
+
+Use a tags array on each service for synonyms and common phrases.
+
+Accept minor typos with a simple fuzzy threshold so leaking, leaky, leak all match.
+
+Example mappings
+
+tv mount, tv wall, hang tv → TV mounting
+
+hole in wall, patch drywall, drywall crack → Drywall repair & patching
+
+running toilet, replace toilet, new toilet → Toilet replacement & repair
+
+clean gutters, gutter flush, downspout → Gutter cleaning & downspout clearing
+
+deck boards, loose rail, stain deck → Deck repair & maintenance or Deck staining & sealing
+
+paint room, touch up, paint trim → Painting
+
+pressure wash driveway, power wash patio → Pressure washing
+
+tile loose, regrout, cracked tile → Tile & grout repair
+
+caulk tub, recaulk shower, silicone → Caulking & re-caulking
+
+fix door latch, door sticks, hinge → Door repair
+
+Display rules
+
+Each result shows service name, the short one line description from the index, and a single primary action button: Call 425-442-9328.
+
+No forms, no email, no chat. Call only.
+
+If there are no search matches, show: Yes, I can likely help. Call 425-442-9328.
+
+When the search box is empty, show the full list in my original order with a Call 425-442-9328 button visible at all times.
+
+Accessibility and mobile
+
+Large tap targets on mobile for the call button.
+
+Input has a visible label Find your service with clear placeholder text like Search repairs, installs, painting, plumbing.
+
+Keyboard navigation works for results.
+
+Data structure
+
+Use an index with fields: name, desc, tags. tags contains synonyms and common phrases to match.
+
+Do not reorder the base list. Only sort within the filtered results using my original list order.
+
+Copy and CTA
+
+All CTAs read exactly: Call 425-442-9328.
+
+Keep descriptions short and written as a single contractor would say them.
+
+Empty state helpers
+
+If the user types something outside scope, like full remodel, suggest closest matches by tag and still show Call 425-442-9328.
