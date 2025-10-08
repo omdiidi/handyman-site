@@ -1,0 +1,288 @@
+Perfect. Here is a clean, copy-first package you can paste into Replit or any builder. No code, just finished wording and a structured search index.
+
+# Business basics
+
+* Business name - Rez The Builder LLC
+* Owner - Reza
+* What we are - Handyman and contractor
+* Proof - 200 plus 5 star reviews
+* Call only - 425-442-9328
+* Service area - Redmond, Bellevue, Kirkland, Issaquah, Sammamish
+* Hours - 8:30 AM to 9:00 PM every day
+* Status - Licensed, bonded, insured
+
+# Home page copy
+
+## Hero
+
+* Headline - Reliable handyman for Redmond and the Eastside
+* Subhead - 200 plus 5 star reviews. Fast, clean, and stress free help for repairs, installs, and upkeep.
+* Primary button - Call 425-442-9328
+* Trust line - Local, licensed, bonded, insured
+
+## What we do
+
+Short list that links to the Job Finder page.
+
+* Repairs - drywall, doors, cabinets, fences, decks, siding, tile, grout, leaks, toilets, screens, small wood rot
+* Install and mount - TVs, soundbars, lights, fans, shelves, pictures, curtains, smart home, doorbells, thermostats, locks, grab bars, mailboxes, pet doors
+* Assembly - furniture, beds, desks, bookshelves, exercise gear, outdoor sets, sheds, playsets
+* Paint and finish - interior, exterior trim, touch ups, caulking, deck and fence stain, grout seal
+* Light plumbing - faucets, toilets, disposals, shower heads, drains, minor leaks, dishwashers
+* Light electrical - fixtures, fans, outlets, switches, dimmers, detectors, outdoor lights
+* Carpentry - trim, hardware, stairs and rails, small shelves
+* Outdoor and maintenance - pressure wash, gutters, deck cleaning, soffit and fascia, weatherstrip, holiday lights
+* General help - home repairs, property care, honey do lists, odd jobs, baby proofing, home sale prep
+
+## Why neighbors call Reza
+
+* 200 plus 5 star reviews from Eastside homeowners
+* Clear communication and on time arrivals
+* Work area protected, cleaned, and checked before leaving
+* Upfront scope and simple scheduling by phone
+
+## Reviews block placeholder
+
+* Title - What your neighbors say
+* Placeholder text - We will place 3 to 5 short quotes here with first name and city
+* CTA under reviews - Call 425-442-9328
+
+## Service areas
+
+* Redmond - Bellevue - Kirkland - Issaquah - Sammamish
+
+## Sticky call bar
+
+* Text - Need a hand today
+* Button - Call 425-442-9328
+
+## Footer
+
+* Rez The Builder LLC - Handyman and contractor
+* Licensed, bonded, insured
+* Hours - 8:30 AM to 9:00 PM daily
+* Call - 425-442-9328
+
+# About page copy
+
+* Header - Meet Reza
+* Body - I run Rez The Builder LLC, a local handyman and contractor serving Redmond and the Eastside. Homeowners call me for clean, careful work and clear communication. With 200 plus 5 star reviews, I keep projects simple and stress free. If it is on your to do list, I can likely take care of it.
+* CTA - Call 425-442-9328
+
+# Contact page copy
+
+* One line - The fastest way to book is to call
+* Big number - 425-442-9328
+* Hours - 8:30 AM to 9:00 PM, 7 days a week
+* Note - No forms or emails, quick answers by phone
+
+# FAQ copy
+
+* Do you give estimates - Yes, by phone after a quick description or photo
+* Do you supply materials - Yes, I can pick up standard materials if needed
+* Are you insured - Yes, licensed, bonded, insured
+* When can you come - Most small tasks are scheduled within a few days
+
+---
+
+# Job Finder content
+
+Use this list to power a simple search. Each item has a short description written as a single contractor would say it.
+
+## Repairs
+
+* Drywall repair and patching - I patch holes and seams, sand smooth, and prep for paint
+* Hole in wall repair - I cut back to solid drywall, patch, mud, and blend to match
+* Ceiling crack repair - I tape and mud hairline cracks, feather and prep for paint
+* Door repair - I fix sticking, rubbing, and latching issues and tune hinges and strikes
+* Cabinet door and drawer repair - I fix sagging doors, soft close issues, slides, and pulls
+* Fence and gate repair - I replace broken pickets and posts and adjust or rebuild gates
+* Deck board and railing repair - I swap damaged boards and tighten or rebuild rails
+* Siding repair minor - I replace small damaged sections and seal to keep water out
+* Tile and grout repair - I reset loose tiles and regrout or caulk joints
+* Leaky faucet and sink repair - I replace cartridges, seals, and supply lines
+* Running toilet repair - I replace fill valves and flappers and set water levels
+* Window screen repair - I rescreen frames and fix pulls and tabs
+* Wood rot repair small sections - I remove soft wood, treat, patch, or replace small pieces
+
+## Installation and mounting
+
+* TV mounting services - I find studs, hide cords when possible, and mount level and secure
+* Flat screen TV installation - I mount, connect devices, and set a clean cable path
+* Soundbar mounting - I mount under the TV and connect for a tidy setup
+* Light fixture installation - I replace existing fixtures and check switches and boxes
+* Ceiling fan installation and replacement - I install fans on rated boxes and balance blades
+* Shelving installation - I mount floating and garage shelves into studs and anchors
+* Picture and mirror hanging - I place and level heavy pieces with proper anchors
+* Art installation - I plan layout and hang securely on the right hardware
+* Curtain rod and blind installation - I mount brackets straight and to the right height
+* Smart home device installation - I set up basic smart devices and connect to Wi-Fi
+* Ring doorbell installation - I mount and wire or battery install and connect the app
+* Smart thermostat installation - I swap thermostats and set up the schedule
+* Smart lock installation - I install deadbolts, pair the app, and test keys and codes
+* Grab bar installation - I anchor bars into framing at safe heights
+* Mailbox installation and replacement - I set a sturdy post and mount the box square
+* Pet door installation - I cut and install a weather sealed pet door per size
+
+## Assembly services
+
+* Furniture assembly - I build flat pack pieces and place them where you want
+* Bed frame and desk assembly - I assemble frames and desks solid and level
+* Bookshelf assembly - I build and secure to the wall if needed
+* Exercise equipment assembly - I assemble treadmills, bikes, and racks and test
+* Outdoor furniture and grill assembly - I assemble and place sets and grills
+* Shed assembly and construction - I build kit sheds on a level base and anchor
+* Playground and playset assembly - I assemble kits, stake, and check hardware
+
+## Painting and finishing
+
+* Interior painting - I paint rooms, walls, and ceilings with clean edges
+* Exterior painting trim and doors - I scrape, prime, and paint exterior trim and doors
+* Touch up painting - I spot repair and blend small areas after fixes
+* Caulking and re-caulking - I remove old bead and apply clean, sealed lines
+* Deck staining and sealing - I prep, stain, and seal for weather protection
+* Fence staining and painting - I stain or paint panels for a uniform look
+* Grout sealing - I clean and seal grout lines to resist stains
+
+## Light plumbing
+
+* Faucet installation and replacement - I swap faucets and connect supplies without leaks
+* Toilet installation and replacement - I set a new wax ring, level, and test flush
+* Garbage disposal installation and repair - I install or replace disposals and clear jams
+* Shower head replacement - I replace heads and check for proper flow and seal
+* Sink drain repair - I fix traps and seals to stop drips and odors
+* Minor leak fixes - I track small leaks and tighten or replace parts
+* Dishwasher installation - I hook up water, drain, and power where connections exist
+
+## Light electrical
+
+* Light fixture replacement - I replace fixtures and confirm proper operation
+* Ceiling fan replacement - I swap existing fans and check balance and speed
+* Outlet and light switch replacement - I replace worn outlets and switches and test
+* Dimmer switch installation - I install compatible dimmers and label wattage
+* Smoke detector installation and battery change - I mount and test detectors
+* Carbon monoxide detector installation - I place and test CO detectors
+* Outdoor lighting replacement - I replace wall and post lights and check sensors
+
+## Carpentry and woodworking
+
+* Trim repair and installation - I repair or add baseboards and casings with clean joints
+* Cabinet hardware replacement - I swap knobs and pulls and align doors
+* Stair and handrail repair - I tighten treads and secure rails solid
+* Small custom shelving - I build and mount simple shelves to fit your space
+
+## Outdoor and maintenance
+
+* Pressure washing - I wash driveways, walks, decks, and siding
+* Power washing services - I adjust pressure for wood, concrete, and vinyl
+* Gutter cleaning - I clear debris and flush downspouts
+* Deck cleaning and maintenance - I clean, tighten hardware, and spot seal
+* Soffit and fascia repair - I replace damaged sections and fasteners
+* Weatherstripping installation - I install door and window seals to cut drafts
+* Holiday light installation and removal - I hang and remove lights safely
+
+## General handyman services
+
+* General home repairs - I handle small fixes in one visit
+* Property maintenance services - I set recurring small upkeep visits
+* Home maintenance plans - I group seasonal tasks into one simple plan
+* Honey do list services - I knock out a list of mixed small tasks
+* Odd jobs - I help with those one-off tasks around the house
+* Baby proofing and childproofing - I install latches, gates, and outlet covers
+* Home sale preparation tasks - I complete small fixes and touch ups before listing
+
+---
+
+# Search index data for Replit
+
+Use this structure for a simple search. You can add synonyms to each item as tags. All results should end with a call prompt.
+
+```
+{
+  "callOnly":"Call 425-442-9328",
+  "areas":["Redmond","Bellevue","Kirkland","Issaquah","Sammamish"],
+  "hours":"8:30 AM to 9:00 PM daily",
+  "status":"Licensed, bonded, insured",
+  "index":[
+    {"name":"Drywall repair and patching","desc":"Patch, mud, sand, and prep for paint","tags":["drywall","hole","patch","repair"]},
+    {"name":"Hole in wall repair","desc":"Cut to solid, patch, mud, blend","tags":["drywall","patch","hole"]},
+    {"name":"Ceiling crack repair","desc":"Tape and mud hairline cracks","tags":["ceiling","crack","drywall"]},
+    {"name":"Door repair","desc":"Fix sticking and latching, tune hinges","tags":["door","latch","hinge","sticking"]},
+    {"name":"Cabinet door and drawer repair","desc":"Fix slides and soft close, align fronts","tags":["cabinet","drawer","hinge","slide"]},
+    {"name":"Fence and gate repair","desc":"Replace pickets and posts, adjust gates","tags":["fence","gate","picket","post"]},
+    {"name":"Deck board and railing repair","desc":"Swap damaged boards and tighten rails","tags":["deck","board","railing"]},
+    {"name":"Siding repair minor","desc":"Replace small sections and seal","tags":["siding","repair"]},
+    {"name":"Tile and grout repair","desc":"Reset tiles and regrout or caulk","tags":["tile","grout"]},
+    {"name":"Leaky faucet and sink repair","desc":"Replace cartridges and seals","tags":["faucet","leak","sink"]},
+    {"name":"Running toilet repair","desc":"Replace fill valve and flapper","tags":["toilet","running","flapper"]},
+    {"name":"Window screen repair","desc":"Rescreen frames and replace spline","tags":["screen","window","mesh"]},
+    {"name":"Wood rot repair small","desc":"Remove soft wood, patch or replace","tags":["wood","rot","trim"]},
+    {"name":"TV mounting","desc":"Find studs, mount level, tidy cables","tags":["tv","mount","bracket"]},
+    {"name":"Flat screen TV installation","desc":"Mount and connect devices","tags":["tv","install","wall"]},
+    {"name":"Soundbar mounting","desc":"Mount under TV and connect","tags":["soundbar","audio","mount"]},
+    {"name":"Light fixture installation","desc":"Replace fixtures and test","tags":["light","fixture","install"]},
+    {"name":"Ceiling fan installation and replacement","desc":"Install on rated box and balance","tags":["fan","ceiling","install"]},
+    {"name":"Shelving installation","desc":"Mount shelves into studs and anchors","tags":["shelf","floating","garage"]},
+    {"name":"Picture and mirror hanging","desc":"Place, level, and anchor heavy items","tags":["picture","mirror","hang"]},
+    {"name":"Art installation","desc":"Plan layout and hang securely","tags":["art","gallery","hang"]},
+    {"name":"Curtain rod and blind installation","desc":"Mount brackets straight and secure","tags":["curtain","rod","blinds"]},
+    {"name":"Smart home device installation","desc":"Set up basic devices and connect","tags":["smart","wifi","setup"]},
+    {"name":"Ring doorbell installation","desc":"Mount and wire or battery setup","tags":["ring","doorbell","video"]},
+    {"name":"Smart thermostat installation","desc":"Swap thermostat and set schedule","tags":["thermostat","nest","ecobee"]},
+    {"name":"Smart lock installation","desc":"Install deadbolt and pair app","tags":["smart","lock","deadbolt"]},
+    {"name":"Grab bar installation","desc":"Anchor bars into framing","tags":["grab","bar","bathroom"]},
+    {"name":"Mailbox installation and replacement","desc":"Set post and mount box square","tags":["mailbox","post"]},
+    {"name":"Pet door installation","desc":"Cut and install sealed pet door","tags":["pet","door","dog","cat"]},
+    {"name":"Furniture assembly","desc":"Build flat pack pieces cleanly","tags":["assembly","furniture","ikea"]},
+    {"name":"Bed frame and desk assembly","desc":"Assemble solid and level","tags":["bed","desk","assembly"]},
+    {"name":"Bookshelf assembly","desc":"Build and secure to wall if needed","tags":["bookshelf","assembly","anchor"]},
+    {"name":"Exercise equipment assembly","desc":"Assemble and test operation","tags":["treadmill","bike","rack"]},
+    {"name":"Outdoor furniture and grill assembly","desc":"Assemble and place sets and grills","tags":["outdoor","grill","patio"]},
+    {"name":"Shed assembly and construction","desc":"Build kit shed on level base","tags":["shed","assembly","kit"]},
+    {"name":"Playground and playset assembly","desc":"Assemble kits and stake safely","tags":["playset","swing","playground"]},
+    {"name":"Interior painting","desc":"Paint rooms, walls, and ceilings","tags":["paint","interior","wall"]},
+    {"name":"Exterior trim and door painting","desc":"Prep and paint exterior trim and doors","tags":["paint","exterior","trim"]},
+    {"name":"Touch up painting","desc":"Spot repair and blend small areas","tags":["paint","touchup"]},
+    {"name":"Caulking and re-caulking","desc":"Remove old bead and apply new","tags":["caulk","seal"]},
+    {"name":"Deck staining and sealing","desc":"Prep, stain, and seal wood","tags":["deck","stain","seal"]},
+    {"name":"Fence staining and painting","desc":"Stain or paint for uniform look","tags":["fence","stain","paint"]},
+    {"name":"Grout sealing","desc":"Clean and seal grout lines","tags":["grout","seal"]},
+    {"name":"Faucet installation and replacement","desc":"Swap faucets and connect supplies","tags":["faucet","install","replace"]},
+    {"name":"Toilet installation and replacement","desc":"Set new toilet and test","tags":["toilet","install","replace"]},
+    {"name":"Garbage disposal install and repair","desc":"Install or replace and clear jams","tags":["disposal","garburator","disposer"]},
+    {"name":"Shower head replacement","desc":"Replace and seal for proper flow","tags":["shower","head","replace"]},
+    {"name":"Sink drain repair","desc":"Fix traps and seals","tags":["drain","p trap","leak"]},
+    {"name":"Minor leak fixes","desc":"Track and stop small leaks","tags":["leak","water"]},
+    {"name":"Dishwasher installation","desc":"Hook up water, drain, and power","tags":["dishwasher","install"]},
+    {"name":"Light fixture replacement","desc":"Replace and test fixtures","tags":["light","replace"]},
+    {"name":"Ceiling fan replacement","desc":"Swap fans and balance blades","tags":["fan","replace"]},
+    {"name":"Outlet and switch replacement","desc":"Replace worn devices and test","tags":["outlet","switch","receptacle"]},
+    {"name":"Dimmer switch installation","desc":"Install compatible dimmers","tags":["dimmer","switch"]},
+    {"name":"Smoke detector install and battery","desc":"Mount and test smoke alarms","tags":["smoke","detector","alarm"]},
+    {"name":"Carbon monoxide detector install","desc":"Place and test CO detectors","tags":["co","detector","alarm"]},
+    {"name":"Outdoor lighting replacement","desc":"Replace wall and post lights","tags":["outdoor","light"]},
+    {"name":"Trim repair and installation","desc":"Repair or add baseboards and casings","tags":["trim","baseboard","casing"]},
+    {"name":"Cabinet hardware replacement","desc":"Swap knobs and pulls","tags":["cabinet","hardware","knob","pull"]},
+    {"name":"Stair and handrail repair","desc":"Tighten treads and secure rails","tags":["stair","handrail","rail"]},
+    {"name":"Small custom shelving","desc":"Build and mount simple shelves","tags":["shelf","custom"]},
+    {"name":"Pressure washing","desc":"Wash driveways, decks, and siding","tags":["pressure","wash","power"]},
+    {"name":"Power washing","desc":"Adjust pressure for each surface","tags":["power","wash"]},
+    {"name":"Gutter cleaning","desc":"Clear gutters and flush downspouts","tags":["gutter","downspout","clean"]},
+    {"name":"Deck cleaning and maintenance","desc":"Clean, tighten, and spot seal","tags":["deck","clean","maintain"]},
+    {"name":"Soffit and fascia repair","desc":"Replace damaged sections","tags":["soffit","fascia","repair"]},
+    {"name":"Weatherstripping installation","desc":"Install door and window seals","tags":["weatherstrip","seal","draft"]},
+    {"name":"Holiday light install and removal","desc":"Hang and remove safely","tags":["holiday","lights","christmas"]},
+    {"name":"General home repairs","desc":"Handle small fixes in one visit","tags":["general","repair"]},
+    {"name":"Property maintenance services","desc":"Set recurring small upkeep visits","tags":["maintenance","property"]},
+    {"name":"Home maintenance plans","desc":"Group seasonal tasks into one plan","tags":["maintenance","plan","seasonal"]},
+    {"name":"Honey do list services","desc":"Knock out a mixed list quickly","tags":["list","honeydo","tasks"]},
+    {"name":"Odd jobs","desc":"Help with one-off tasks","tags":["odd","misc","help"]},
+    {"name":"Baby proofing and childproofing","desc":"Install latches and safety gear","tags":["baby","child","proof"]},
+    {"name":"Home sale preparation tasks","desc":"Small fixes and touch ups before listing","tags":["sale","prep","realtor"]}
+  ]
+}
+```
+
+Display rule for every search result - show the short description and end with Call 425-442-9328. If there is no match - show Yes, I can likely help. Call 425-442-9328.
+
+That is everything you need to generate a simple, high converting site that pushes calls and highlights 200 plus 5 star reviews.
