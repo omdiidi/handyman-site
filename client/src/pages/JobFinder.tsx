@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 import JobFinderSearch from "@/components/JobFinderSearch";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
 
 const services = [
   {
@@ -187,6 +190,18 @@ export default function JobFinder() {
         </div>
         
         <JobFinderSearch services={services} />
+        
+        <Card className="mt-8 p-8 flex flex-col items-center justify-center text-center" data-testid="card-final-cta">
+          <p className="text-lg font-semibold text-foreground mb-4" data-testid="text-final-cta">
+            Can't find what you're looking for?<br />Just give a call
+          </p>
+          <a href="tel:4254429328">
+            <Button size="lg" variant="default" className="bg-accent text-accent-foreground border border-accent-border" data-testid="button-final-cta-call">
+              <Phone className="w-5 h-5" />
+              Call 425-442-9328
+            </Button>
+          </a>
+        </Card>
       </div>
     </div>
   );
