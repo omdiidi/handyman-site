@@ -99,6 +99,10 @@ export default function Hero() {
           </div>
           <span className="text-white/95 font-semibold">5.0 (200+ reviews)</span>
         </div>
+        
+        <p className="text-sm text-white/80 mt-2" data-testid="text-service-areas">
+          Redmond • Bellevue • Kirkland • Issaquah • Sammamish
+        </p>
       </div>
     </section>
   );
