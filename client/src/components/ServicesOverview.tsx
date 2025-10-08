@@ -89,6 +89,15 @@ export default function ServicesOverview() {
             );
           })}
         </div>
+
+        <div className="text-center mt-12">
+          <Link href="/job-finder?focus=true">
+            <Button variant="outline" data-testid="button-browse-services-bottom">
+              <Search className="w-4 h-4" />
+              Browse all services
+            </Button>
+          </Link>
+        </div>
       </div>
     </section>
   );
