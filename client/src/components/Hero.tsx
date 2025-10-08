@@ -1,15 +1,61 @@
 import { Phone, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@assets/generated_images/Professional_handyman_hero_image_5a6b69b4.png";
+import { useState, useEffect } from "react";
+import image1 from "@assets/image1_1759899454942.webp";
+import image2 from "@assets/image2_1759899454944.webp";
+import image3 from "@assets/image3_1759899454944.webp";
+import image4 from "@assets/image4_1759899454945.webp";
+import image5 from "@assets/image5_1759899454945.webp";
+import image6 from "@assets/image6_1759899454945.webp";
+import image9 from "@assets/image9_1759899454946.webp";
+import image10 from "@assets/image10_1759899454947.webp";
+import image11 from "@assets/image11_1759899454947.webp";
+import image12 from "@assets/image12_1759899454947.webp";
+import image13 from "@assets/image13_1759899454948.webp";
+import image14 from "@assets/image14_1759899454948.webp";
+import image17 from "@assets/image17_1759899454948.webp";
+import image18 from "@assets/image18_1759899454948.webp";
+
+const heroImages = [
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image9,
+  image10,
+  image11,
+  image12,
+  image13,
+  image14,
+  image17,
+  image18,
+];
 
 export default function Hero() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
+      {heroImages.map((image, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+            index === currentImageIndex ? "opacity-100" : "opacity-0"
+          }`}
+          style={{ backgroundImage: `url(${image})` }}
+        />
+      ))}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center py-20">
