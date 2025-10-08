@@ -7,12 +7,12 @@ export default function About() {
       <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6" data-testid="text-about-title">
-            Hi, I'm Reza
+            Meet Reza
           </h1>
           
           <div className="prose prose-lg max-w-none text-left">
             <p className="text-lg text-foreground leading-relaxed mb-6" data-testid="text-about-bio">
-              I'm the owner of Rez The Builder LLC. For over 10 years, I've been helping clients across Redmond, Bellevue, Kirkland, Issaquah, and Sammamish with reliable handyman and contractor work.
+              Hi, I'm Reza - owner of Rez The Builder LLC. For over 10 years, I've been helping clients across Redmond, Bellevue, Kirkland, Issaquah, and Sammamish with reliable handyman and contractor work.
             </p>
             <p className="text-lg text-foreground leading-relaxed mb-6">
               When you call me, you're not talking to a big company — you're speaking directly with me. I take pride in clean, careful work and clear, honest communication every step of the way. My goal is to make sure the job gets done right and without any stress.
