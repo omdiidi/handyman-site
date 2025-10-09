@@ -1,4 +1,4 @@
-import { Phone, Clock, MapPin } from "lucide-react";
+import { Phone, Clock, MapPin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -14,11 +14,17 @@ export default function Contact() {
             The fastest way to book is to call
           </p>
 
-          <a href="tel:4254429328" className="inline-block mb-8">
-            <div className="text-4xl md:text-5xl font-extrabold text-primary hover:text-primary/80 transition-colors" data-testid="text-contact-phone">
-              425-442-9328
-            </div>
-          </a>
+          <div className="mb-8">
+            <a href="tel:4254429328" className="inline-block mb-4">
+              <div className="text-4xl md:text-5xl font-extrabold text-primary hover:text-primary/80 transition-colors" data-testid="text-contact-phone">
+                425-442-9328
+              </div>
+            </a>
+            <a href="mailto:reza-z@hotmail.com" className="flex items-center justify-center gap-2 text-foreground hover-elevate active-elevate-2 rounded-md px-4 py-2 mx-auto w-fit transition-all" data-testid="link-contact-email">
+              <Mail className="w-5 h-5 text-primary" />
+              <span className="text-lg font-medium">reza-z@hotmail.com</span>
+            </a>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <Card className="p-6">

@@ -53,7 +53,7 @@ const services = [
 
 export default function ServicesOverview() {
   return (
-    <section className="py-16 md:py-20 bg-background">
+    <section className="pt-8 pb-16 md:pb-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <Card className="p-6 mb-8 max-w-2xl mx-auto" data-testid="card-contact-info">
           <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Contact Information</h3>
