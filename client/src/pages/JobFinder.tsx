@@ -96,6 +96,16 @@ const services = [
     "tags": ["smart", "ring", "doorbell", "lock", "thermostat", "nest", "ecobee", "wifi", "smart home", "video doorbell"]
   },
   {
+    "name": "Bathroom Exhaust Fan Installation",
+    "desc": "Installing or replacing bathroom exhaust fans for proper ventilation and moisture control.",
+    "tags": ["bathroom", "exhaust", "fan", "ventilation", "install", "replace", "bathroom fan", "exhaust fan", "vent", "moisture"]
+  },
+  {
+    "name": "Smart Entrance Door Lock & Knob Replacement",
+    "desc": "Installing smart entrance door locks, replacing traditional locks, and upgrading door knobs and handles.",
+    "tags": ["door", "lock", "smart", "entrance", "knob", "handle", "replace", "install", "smart lock", "door lock", "door knob", "replacement", "door handle"]
+  },
+  {
     "name": "Power Washing (Heavy Duty Surfaces)",
     "desc": "Deep cleaning concrete, brick, and commercial walkways with the right pressure.",
     "tags": ["power wash", "pressure wash", "concrete", "brick", "commercial", "heavy duty", "walkway"]
