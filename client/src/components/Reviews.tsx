@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Star, ChevronDown } from "lucide-react";
+import { Star, ChevronDown, ExternalLink } from "lucide-react";
 import { useState } from "react";
 
 const allReviews = [
@@ -100,22 +100,30 @@ export default function Reviews() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {visibleReviews.map((review, index) => (
-            <Card key={index} className="p-6" data-testid={`card-review-${index}`}>
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-foreground mb-4 italic" data-testid={`text-review-${index}`}>"{review.text}"</p>
-              <p className="text-sm text-muted-foreground" data-testid={`text-reviewer-${index}`}>
-                — {review.author}, {review.location}
-              </p>
-            </Card>
+            <a
+              key={index}
+              href="https://g.page/r/CZhYbbZMOPPqEAE/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <Card className="p-6 h-full hover-elevate active-elevate-2 transition-all" data-testid={`card-review-${index}`}>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-foreground mb-4 italic" data-testid={`text-review-${index}`}>"{review.text}"</p>
+                <p className="text-sm text-muted-foreground" data-testid={`text-reviewer-${index}`}>
+                  — {review.author}, {review.location}
+                </p>
+              </Card>
+            </a>
           ))}
         </div>
 
-        {hasMore && (
-          <div className="text-center mb-8">
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
+          {hasMore && (
             <Button 
               variant="outline" 
               onClick={showMore}
@@ -124,8 +132,21 @@ export default function Reviews() {
               <ChevronDown className="w-4 h-4" />
               Show More Reviews
             </Button>
-          </div>
-        )}
+          )}
+          <a 
+            href="https://g.page/r/CZhYbbZMOPPqEAE/review"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button 
+              variant="outline"
+              data-testid="button-view-on-google"
+            >
+              <ExternalLink className="w-4 h-4" />
+              View on Google
+            </Button>
+          </a>
+        </div>
 
         <div className="text-center">
           <a href="tel:4254429328">
