@@ -34,8 +34,10 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
-            return (
-              <div key={index} className="text-center" data-testid={`reason-${index}`}>
+            const isReviewsItem = reason.title === "200+ 5-star reviews";
+            
+            const content = (
+              <>
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                   <Icon className="w-8 h-8 text-primary" />
                 </div>
@@ -45,6 +47,27 @@ export default function WhyChooseUs() {
                 <p className="text-muted-foreground" data-testid={`text-reason-desc-${index}`}>
                   {reason.description}
                 </p>
+              </>
+            );
+            
+            if (isReviewsItem) {
+              return (
+                <a
+                  key={index}
+                  href="https://g.page/r/CZhYbbZMOPPqEAE/review"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-center hover-elevate active-elevate-2 rounded-md p-4 -m-4 transition-all"
+                  data-testid={`reason-${index}`}
+                >
+                  {content}
+                </a>
+              );
+            }
+            
+            return (
+              <div key={index} className="text-center" data-testid={`reason-${index}`}>
+                {content}
               </div>
             );
           })}
