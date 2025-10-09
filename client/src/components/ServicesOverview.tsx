@@ -55,18 +55,6 @@ export default function ServicesOverview() {
   return (
     <section className="py-16 md:py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="text-services-title">
-            Services
-          </h2>
-          <Link href="/job-finder?focus=true">
-            <Button variant="outline" data-testid="button-browse-all-services">
-              <Search className="w-4 h-4" />
-              Browse all services
-            </Button>
-          </Link>
-        </div>
-
         <Card className="p-6 mb-8 max-w-2xl mx-auto" data-testid="card-contact-info">
           <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Contact Information</h3>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -80,6 +68,18 @@ export default function ServicesOverview() {
             </a>
           </div>
         </Card>
+
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="text-services-title">
+            Services
+          </h2>
+          <Link href="/job-finder?focus=true">
+            <Button variant="outline" data-testid="button-browse-all-services">
+              <Search className="w-4 h-4" />
+              Browse all services
+            </Button>
+          </Link>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => {
