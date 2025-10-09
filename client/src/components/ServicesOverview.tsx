@@ -27,7 +27,7 @@ const services = [
   {
     icon: Tv,
     title: "Installation & Mounting",
-    description: "Mounting pictures, mirrors, and artwork securely and level. Installing mailboxes, pet doors, weatherstripping, and handrails. Setting up all types of fixtures and home improvements.",
+    description: "Installing bathroom exhaust fans, mounting pictures, mirrors, and artwork securely and level. Installing mailboxes, pet doors, weatherstripping, and handrails. Setting up all types of fixtures and home improvements.",
   },
   {
     icon: Package,
