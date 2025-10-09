@@ -91,14 +91,20 @@ export default function Hero() {
           </Badge>
         </div>
         
-        <div className="flex items-center justify-center gap-2 mt-4" data-testid="rating-display">
+        <a 
+          href="https://g.page/r/CZhYbbZMOPPqEAE/review" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 mt-4 hover-elevate active-elevate-2 inline-flex rounded-md px-3 py-1 transition-all" 
+          data-testid="rating-display"
+        >
           <div className="flex gap-1">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
             ))}
           </div>
           <span className="text-white/95 font-semibold">5.0 (200+ reviews)</span>
-        </div>
+        </a>
         
         <p className="text-sm text-white/80 mt-2" data-testid="text-service-areas">
           Redmond • Bellevue • Kirkland • Issaquah • Sammamish
