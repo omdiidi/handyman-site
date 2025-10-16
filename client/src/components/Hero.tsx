@@ -71,7 +71,10 @@ export default function Hero() {
           <a href="tel:4254429328">
             <Button size="lg" variant="default" className="bg-accent text-accent-foreground border border-accent-border text-lg px-8 py-6 rounded-full" data-testid="button-hero-call">
               <Phone className="w-5 h-5" />
-              <span className="font-bold">Call 425-442-9328</span>
+              <div className="flex flex-col items-start">
+                <span className="font-bold">Call 425-442-9328</span>
+                <span className="text-xs font-normal">or Text</span>
+              </div>
             </Button>
           </a>
         </div>

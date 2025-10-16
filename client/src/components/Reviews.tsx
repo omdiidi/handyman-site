@@ -94,9 +94,17 @@ export default function Reviews() {
   return (
     <section className="py-16 md:py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12" data-testid="text-reviews-title">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-4" data-testid="text-reviews-title">
           What your neighbors say
         </h2>
+        <div className="flex items-center justify-center gap-2 mb-12">
+          <div className="flex gap-1">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+            ))}
+          </div>
+          <span className="text-sm text-muted-foreground">200+ 5 stars</span>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {visibleReviews.map((review, index) => (

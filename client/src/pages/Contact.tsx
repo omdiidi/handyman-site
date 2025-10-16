@@ -11,7 +11,7 @@ export default function Contact() {
             Get in Touch
           </h1>
           <p className="text-xl text-muted-foreground mb-8" data-testid="text-contact-subtitle">
-            The fastest way to book is to call
+            The fastest way to book is to call or text
           </p>
 
           <div className="mb-8">

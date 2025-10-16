@@ -9,8 +9,8 @@ export default function Home() {
     <div>
       <Hero />
       <ServicesOverview />
-      <WhyChooseUs />
       <Reviews />
+      <WhyChooseUs />
       <ServiceAreas />
     </div>
   );

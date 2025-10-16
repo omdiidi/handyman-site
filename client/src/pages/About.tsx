@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+import { Phone, Star } from "lucide-react";
 
 export default function About() {
   return (
@@ -29,6 +29,14 @@ export default function About() {
                 <span className="font-bold">Call 425-442-9328</span>
               </Button>
             </a>
+            <div className="flex items-center justify-center gap-2 mt-4">
+              <div className="flex gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <span className="text-sm text-muted-foreground">200+ 5 stars</span>
+            </div>
           </div>
         </div>
       </div>
