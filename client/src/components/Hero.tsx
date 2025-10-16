@@ -69,7 +69,7 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <a href="tel:4254429328">
-            <Button size="lg" variant="default" className="bg-accent text-accent-foreground border border-accent-border text-lg px-8 py-6 rounded-full" data-testid="button-hero-call">
+            <Button size="lg" variant="default" className="bg-accent text-accent-foreground border border-accent-border text-lg px-6 py-6 rounded-full" data-testid="button-hero-call">
               <Phone className="w-5 h-5" />
               <div className="flex flex-col items-start">
                 <span className="font-bold">Call 425-442-9328</span>
