@@ -42,7 +42,7 @@ export default function CallActionPopover({
           </div>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-auto p-0 bg-transparent border-0 shadow-none" align="center" side="top" sideOffset={-65}>
+      <PopoverContent className="w-auto p-0 bg-transparent border-0 shadow-none" align="center" side="top" sideOffset={-55}>
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -56,7 +56,7 @@ export default function CallActionPopover({
                 <Button
                   size="lg"
                   variant="default"
-                  className="bg-accent text-accent-foreground border border-accent-border px-10 py-7 text-lg font-bold rounded-r-none"
+                  className="bg-accent text-accent-foreground border border-accent-border px-12 py-8 text-lg font-bold rounded-r-none"
                   data-testid="button-call-action"
                 >
                   <Phone className="w-7 h-7" />
@@ -67,7 +67,7 @@ export default function CallActionPopover({
                 <Button
                   size="lg"
                   variant="default"
-                  className="bg-accent text-accent-foreground border border-accent-border px-10 py-7 text-lg font-bold rounded-l-none"
+                  className="bg-accent text-accent-foreground border border-accent-border px-12 py-8 text-lg font-bold rounded-l-none"
                   data-testid="button-text-action"
                 >
                   <MessageSquare className="w-7 h-7" />
