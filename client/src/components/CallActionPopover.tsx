@@ -42,7 +42,7 @@ export default function CallActionPopover({
           </div>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-auto p-0 bg-transparent border-0 shadow-none" align="center" side="top" sideOffset={-55}>
+      <PopoverContent className="w-auto p-0 bg-transparent border-0 shadow-none" align="center" side="top" sideOffset={-35}>
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -63,6 +63,7 @@ export default function CallActionPopover({
                   Call
                 </Button>
               </a>
+              <div className="w-1 bg-accent" />
               <a href={`sms:${phoneNumber}`}>
                 <Button
                   size="lg"
