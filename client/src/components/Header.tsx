@@ -1,7 +1,8 @@
 import { Link, useLocation } from "wouter";
-import { Phone, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import CallActionPopover from "./CallActionPopover";
 
 export default function Header() {
   const [location] = useLocation();
@@ -37,12 +38,15 @@ export default function Header() {
             ))}
           </nav>
 
-          <a href="tel:4254429328" className="hidden md:block">
-            <Button variant="default" className="bg-accent text-accent-foreground border border-accent-border" data-testid="button-header-call">
-              <Phone className="w-4 h-4" />
-              <span className="font-bold">425-442-9328</span>
-            </Button>
-          </a>
+          <div className="hidden md:block">
+            <CallActionPopover
+              phone="425-442-9328"
+              variant="default"
+              size="default"
+              className="bg-accent text-accent-foreground border border-accent-border"
+              testId="button-header-call"
+            />
+          </div>
 
           <Button
             variant="ghost"
@@ -71,12 +75,15 @@ export default function Header() {
                 </Button>
               </Link>
             ))}
-            <a href="tel:4254429328" className="mt-2">
-              <Button variant="default" className="w-full bg-accent text-accent-foreground border border-accent-border" data-testid="button-mobile-call">
-                <Phone className="w-4 h-4" />
-                <span className="font-bold">425-442-9328</span>
-              </Button>
-            </a>
+            <div className="mt-2">
+              <CallActionPopover
+                phone="425-442-9328"
+                variant="default"
+                size="default"
+                className="w-full bg-accent text-accent-foreground border border-accent-border"
+                testId="button-mobile-call"
+              />
+            </div>
           </nav>
         </div>
       )}

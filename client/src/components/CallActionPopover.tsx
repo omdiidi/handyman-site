@@ -50,27 +50,27 @@ export default function CallActionPopover({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 8 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="flex gap-4"
+              className="flex gap-4 w-full"
             >
-              <a href={`tel:${phoneNumber}`}>
+              <a href={`tel:${phoneNumber}`} className="flex-1">
                 <Button
                   size="lg"
                   variant="default"
-                  className="bg-accent text-accent-foreground border border-accent-border px-6"
+                  className="bg-accent text-accent-foreground border border-accent-border px-8 py-6 w-full text-lg"
                   data-testid="button-call-action"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-6 h-6" />
                   Call
                 </Button>
               </a>
-              <a href={`sms:${phoneNumber}`}>
+              <a href={`sms:${phoneNumber}`} className="flex-1">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="px-6"
+                  className="px-8 py-6 w-full text-lg"
                   data-testid="button-text-action"
                 >
-                  <MessageSquare className="w-5 h-5" />
+                  <MessageSquare className="w-6 h-6" />
                   Text
                 </Button>
               </a>
