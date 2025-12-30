@@ -42,7 +42,7 @@ export default function CallActionPopover({
           </div>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-auto p-0 bg-transparent border-0 shadow-none" align="center" side="top" sideOffset={-50}>
+      <PopoverContent className="w-auto p-0 bg-transparent border-0 shadow-none" align="center" side="top" sideOffset={-40}>
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -50,13 +50,13 @@ export default function CallActionPopover({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 8 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="flex gap-4 w-full"
+              className="flex gap-1"
             >
               <a href={`tel:${phoneNumber}`}>
                 <Button
                   size="lg"
                   variant="default"
-                  className="bg-accent text-accent-foreground border border-accent-border px-10 py-7 text-lg font-bold"
+                  className="bg-accent text-accent-foreground border border-accent-border px-10 py-7 text-lg font-bold rounded-r-none"
                   data-testid="button-call-action"
                 >
                   <Phone className="w-7 h-7" />
@@ -67,7 +67,7 @@ export default function CallActionPopover({
                 <Button
                   size="lg"
                   variant="default"
-                  className="bg-accent text-accent-foreground border border-accent-border px-10 py-7 text-lg font-bold"
+                  className="bg-accent text-accent-foreground border border-accent-border px-10 py-7 text-lg font-bold rounded-l-none"
                   data-testid="button-text-action"
                 >
                   <MessageSquare className="w-7 h-7" />
