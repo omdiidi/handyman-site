@@ -1,72 +1,83 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Phone, MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface CallActionPopoverProps {
-  phoneNumber?: string;
+  phone: string;
+  variant?: "default" | "outline";
+  size?: "sm" | "lg" | "default";
   className?: string;
+  testId?: string;
 }
 
-export function CallActionPopover({
-  phoneNumber = "425-442-9328",
+export default function CallActionPopover({
+  phone,
+  variant = "default",
+  size = "lg",
   className = "",
+  testId,
 }: CallActionPopoverProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const phoneNumber = phone.replace(/\D/g, "");
 
   return (
-    <div 
-      className={`relative ${className}`}
-      onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={() => setIsOpen(false)}
-    >
-      <Button
-        size="lg"
-        variant="default"
-        className="bg-accent text-accent-foreground border border-accent-border px-8 py-6 text-lg font-bold w-full"
-        data-testid="button-call-trigger"
-      >
-        <Phone className="w-5 h-5" />
-        <div className="flex flex-col items-start leading-tight">
-          <span>Call Now</span>
-          <span className="text-xs font-normal">or Text</span>
-        </div>
-      </Button>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.15, ease: "easeOut" }}
-            className="absolute inset-0 flex overflow-hidden rounded-md bg-accent"
-          >
-            <a href={`tel:${phoneNumber}`} className="flex-1">
-              <Button
-                size="lg"
-                variant="default"
-                className="bg-accent text-accent-foreground h-full w-full rounded-none border-0 text-lg font-bold"
-                data-testid="button-call-action"
-              >
-                <Phone className="w-6 h-6" />
-                Call
-              </Button>
-            </a>
-            <a href={`sms:${phoneNumber}`} className="flex-1">
-              <Button
-                size="lg"
-                variant="default"
-                className="bg-accent text-accent-foreground h-full w-full rounded-none border-0 text-lg font-bold"
-                data-testid="button-text-action"
-              >
-                <MessageSquare className="w-6 h-6" />
-                Text
-              </Button>
-            </a>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+    <Popover open={isOpen} onOpenChange={setIsOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          size={size}
+          variant={variant}
+          className={className}
+          data-testid={testId}
+        >
+          <Phone className="w-4 h-4" />
+          <div className="flex flex-col items-center">
+            <span className="font-bold">Call {phone}</span>
+            <span className="text-xs font-normal">or Text</span>
+          </div>
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-auto p-0 bg-transparent border-0 shadow-none" align="center" side="top" sideOffset={-55}>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 8 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 8 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="flex gap-1"
+            >
+              <a href={`tel:${phoneNumber}`}>
+                <Button
+                  size="lg"
+                  variant="default"
+                  className="bg-accent text-accent-foreground border border-accent-border px-12 py-8 text-lg font-bold rounded-r-none"
+                  data-testid="button-call-action"
+                >
+                  <Phone className="w-7 h-7" />
+                  Call
+                </Button>
+              </a>
+              <a href={`sms:${phoneNumber}`}>
+                <Button
+                  size="lg"
+                  variant="default"
+                  className="bg-accent text-accent-foreground border border-accent-border px-12 py-8 text-lg font-bold rounded-l-none"
+                  data-testid="button-text-action"
+                >
+                  <MessageSquare className="w-7 h-7" />
+                  Text
+                </Button>
+              </a>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </PopoverContent>
+    </Popover>
   );
 }
