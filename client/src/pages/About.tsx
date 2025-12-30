@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Phone, Star } from "lucide-react";
+import { Star } from "lucide-react";
+import CallActionPopover from "@/components/CallActionPopover";
 
 export default function About() {
   return (
@@ -22,13 +22,14 @@ export default function About() {
             </p>
           </div>
 
-          <div className="mt-8">
-            <a href="tel:4254429328">
-              <Button size="lg" variant="default" className="bg-accent text-accent-foreground border border-accent-border" data-testid="button-about-call">
-                <Phone className="w-5 h-5" />
-                <span className="font-bold">Call 425-442-9328</span>
-              </Button>
-            </a>
+          <div className="mt-8 flex flex-col items-center">
+            <CallActionPopover
+              phone="425-442-9328"
+              variant="default"
+              size="lg"
+              className="bg-accent text-accent-foreground border border-accent-border"
+              testId="button-about-call"
+            />
             <div className="flex items-center justify-center gap-2 mt-4">
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (

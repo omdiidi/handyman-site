@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star, ChevronDown, ExternalLink } from "lucide-react";
 import { useState } from "react";
+import CallActionPopover from "./CallActionPopover";
 
 const allReviews = [
   {
@@ -157,11 +158,13 @@ export default function Reviews() {
         </div>
 
         <div className="text-center">
-          <a href="tel:4254429328">
-            <Button variant="default" className="bg-accent text-accent-foreground border border-accent-border" data-testid="button-reviews-call">
-              Call 425-442-9328
-            </Button>
-          </a>
+          <CallActionPopover
+            phone="425-442-9328"
+            variant="default"
+            size="default"
+            className="bg-accent text-accent-foreground border border-accent-border"
+            testId="button-reviews-call"
+          />
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
-import { Phone, CheckCircle, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { CheckCircle, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useState, useEffect } from "react";
+import CallActionPopover from "./CallActionPopover";
 import image1 from "@assets/image1_1759899454942.webp";
 import image2 from "@assets/image2_1759899454944.webp";
 import image3 from "@assets/image3_1759899454944.webp";
@@ -68,15 +68,13 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-          <a href="tel:4254429328">
-            <Button size="lg" variant="default" className="bg-accent text-accent-foreground border border-accent-border text-lg px-6 py-3 rounded-full gap-3" data-testid="button-hero-call">
-              <Phone className="w-4 h-4" />
-              <div className="flex flex-col items-center">
-                <span className="font-bold">Call 425-442-9328</span>
-                <span className="text-xs font-normal">or Text</span>
-              </div>
-            </Button>
-          </a>
+          <CallActionPopover
+            phone="425-442-9328"
+            variant="default"
+            size="lg"
+            className="bg-accent text-accent-foreground border border-accent-border text-lg px-6 py-3 rounded-full gap-3"
+            testId="button-hero-call"
+          />
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-3 text-white/90">
