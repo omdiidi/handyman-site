@@ -7,4 +7,5 @@ vite.config.ts.*
 .env
 *.log
 .vscode/
-.idea/.env
+.idea/
+.config/replit/.semgrep/semgrep_rules.json
