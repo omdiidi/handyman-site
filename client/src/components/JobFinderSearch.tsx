@@ -47,6 +47,11 @@ export default function JobFinderSearch({ services }: JobFinderSearchProps) {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
+    // Pre-populate search from URL query param
+    const queryFromUrl = params.get('q');
+    if (queryFromUrl) {
+      setSearchQuery(queryFromUrl);
+    }
     if (params.get('focus') === 'true') {
       searchInputRef.current?.focus();
     }

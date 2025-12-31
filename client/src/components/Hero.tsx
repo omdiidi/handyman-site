@@ -48,7 +48,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center overflow-hidden">
+    <section className="relative pt-24 pb-4 flex flex-col justify-center overflow-hidden">
       {heroImages.map((image, index) => (
         <div
           key={index}
@@ -59,7 +59,7 @@ export default function Hero() {
       ))}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center py-16">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center pt-16">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-testid="text-hero-headline">
           Reliable handyman for Redmond and the Eastside
         </h1>
