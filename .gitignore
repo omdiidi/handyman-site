@@ -9,3 +9,8 @@ vite.config.ts.*
 .vscode/
 .idea/
 .config/replit/.semgrep/semgrep_rules.json
+.config/.semgrep/semgrep_rules.json
+
+.env
+.config/replit/.semgrep/semgrep_rules.json
+.local/
