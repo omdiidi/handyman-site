@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Star, ChevronDown, ExternalLink } from "lucide-react";
-import { useState } from "react";
+import { Star, ExternalLink, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 import CallActionPopover from "./CallActionPopover";
 
 const allReviews = [
@@ -83,14 +83,7 @@ const allReviews = [
 ];
 
 export default function Reviews() {
-  const [visibleCount, setVisibleCount] = useState(3);
-
-  const showMore = () => {
-    setVisibleCount(prev => Math.min(prev + 3, allReviews.length));
-  };
-
-  const visibleReviews = allReviews.slice(0, visibleCount);
-  const hasMore = visibleCount < allReviews.length;
+  const visibleReviews = allReviews.slice(0, 3);
 
   return (
     <section className="py-16 md:py-20 bg-background">
@@ -109,13 +102,7 @@ export default function Reviews() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {visibleReviews.map((review, index) => (
-            <a
-              key={index}
-              href="https://g.page/r/CZhYbbZMOPPqEAE/review"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-            >
+            <Link key={index} href="/testimonials" className="block h-full cursor-pointer">
               <Card className="p-6 h-full hover-elevate active-elevate-2 transition-all" data-testid={`card-review-${index}`}>
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -127,27 +114,26 @@ export default function Reviews() {
                   — {review.author}, {review.location}
                 </p>
               </Card>
-            </a>
+            </Link>
           ))}
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
-          {hasMore && (
-            <Button 
-              variant="outline" 
-              onClick={showMore}
+          <Link href="/testimonials">
+            <Button
+              variant="outline"
               data-testid="button-show-more-reviews"
             >
-              <ChevronDown className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4" />
               Show More Reviews
             </Button>
-          )}
-          <a 
+          </Link>
+          <a
             href="https://g.page/r/CZhYbbZMOPPqEAE/review"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button 
+            <Button
               variant="outline"
               data-testid="button-view-on-google"
             >
@@ -170,3 +156,4 @@ export default function Reviews() {
     </section>
   );
 }
+

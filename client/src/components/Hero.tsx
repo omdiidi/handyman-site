@@ -1,7 +1,9 @@
 import { CheckCircle, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useState, useEffect } from "react";
+import { Link } from "wouter";
 import CallActionPopover from "./CallActionPopover";
+import HeroReviewsMarquee from "./HeroReviewsMarquee";
 import image1 from "@assets/image1_1759899454942.webp";
 import image2 from "@assets/image2_1759899454944.webp";
 import image3 from "@assets/image3_1759899454944.webp";
@@ -50,66 +52,70 @@ export default function Hero() {
       {heroImages.map((image, index) => (
         <div
           key={index}
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
-            index === currentImageIndex ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${index === currentImageIndex ? "opacity-100" : "opacity-0"
+            }`}
           style={{ backgroundImage: `url(${image})` }}
         />
       ))}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center py-20">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center py-16">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-testid="text-hero-headline">
           Reliable handyman for Redmond and the Eastside
         </h1>
-        
-        <p className="text-lg md:text-xl text-white/95 mb-8 max-w-3xl mx-auto" data-testid="text-hero-subhead">
+
+        <p className="text-lg md:text-xl text-white/95 mb-6 max-w-3xl mx-auto" data-testid="text-hero-subhead">
           200+ 5-star reviews. Fast, clean, and stress-free help for repairs, installs, and upkeep.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-2">
           <CallActionPopover
             phone="425-442-9328"
             variant="default"
             size="lg"
             className="bg-accent text-accent-foreground border border-accent-border text-lg px-6 py-3 rounded-full gap-3"
             testId="button-hero-call"
+            popupOffset={-91}
           />
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 text-white/90">
-          <Badge variant="outline" className="bg-white/10 text-white border-white/30 backdrop-blur-sm" data-testid="badge-licensed">
-            <CheckCircle className="w-4 h-4" />
+        {/* Even smaller badges (50% smaller again) */}
+        <div className="flex flex-wrap items-center justify-center gap-1 text-white/90 mb-1">
+          <Badge variant="outline" className="bg-white/10 text-white border-white/30 backdrop-blur-sm text-[8px] px-1 py-0" data-testid="badge-licensed">
+            <CheckCircle className="w-2 h-2" />
             Licensed
           </Badge>
-          <Badge variant="outline" className="bg-white/10 text-white border-white/30 backdrop-blur-sm" data-testid="badge-bonded">
-            <CheckCircle className="w-4 h-4" />
+          <Badge variant="outline" className="bg-white/10 text-white border-white/30 backdrop-blur-sm text-[8px] px-1 py-0" data-testid="badge-bonded">
+            <CheckCircle className="w-2 h-2" />
             Bonded
           </Badge>
-          <Badge variant="outline" className="bg-white/10 text-white border-white/30 backdrop-blur-sm" data-testid="badge-insured">
-            <CheckCircle className="w-4 h-4" />
+          <Badge variant="outline" className="bg-white/10 text-white border-white/30 backdrop-blur-sm text-[8px] px-1 py-0" data-testid="badge-insured">
+            <CheckCircle className="w-2 h-2" />
             Insured
           </Badge>
         </div>
-        
-        <a 
-          href="https://g.page/r/CZhYbbZMOPPqEAE/review" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 mt-4 hover-elevate active-elevate-2 inline-flex rounded-md px-3 py-1 transition-all" 
+
+        {/* Rating - links to testimonials page */}
+        <Link
+          href="/testimonials"
+          className="flex items-center justify-center gap-2 hover-elevate active-elevate-2 inline-flex rounded-md px-3 py-1 transition-all"
           data-testid="rating-display"
         >
-          <div className="flex gap-1">
+          <div className="flex gap-0.5">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+              <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
             ))}
           </div>
-          <span className="text-white/95 font-semibold">5.0 (200+ reviews)</span>
-        </a>
-        
-        <p className="text-sm text-white/80 mt-2" data-testid="text-service-areas">
+          <span className="text-white/95 font-semibold text-sm">5.0 (200+ reviews)</span>
+        </Link>
+
+        {/* Service areas */}
+        <p className="text-xs text-white/80 mt-1 mb-3" data-testid="text-service-areas">
           Redmond • Bellevue • Kirkland • Issaquah • Sammamish
         </p>
+
+        {/* Scrolling reviews bar - now inline with content, white background */}
+        <HeroReviewsMarquee />
       </div>
     </section>
   );

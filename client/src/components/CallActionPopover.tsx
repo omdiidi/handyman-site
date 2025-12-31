@@ -14,6 +14,7 @@ interface CallActionPopoverProps {
   size?: "sm" | "lg" | "default";
   className?: string;
   testId?: string;
+  popupOffset?: number;
 }
 
 export default function CallActionPopover({
@@ -22,27 +23,33 @@ export default function CallActionPopover({
   size = "lg",
   className = "",
   testId,
-}: CallActionPopoverProps) {
+  trigger,
+  popupOffset = -84,
+}: CallActionPopoverProps & { trigger?: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const phoneNumber = phone.replace(/\D/g, "");
 
   return (
     <Popover open={isOpen} onOpenChange={setIsOpen}>
       <PopoverTrigger asChild>
-        <Button
-          size={size}
-          variant={variant}
-          className={className}
-          data-testid={testId}
-        >
-          <Phone className="w-4 h-4" />
-          <div className="flex flex-col items-center">
-            <span className="font-bold">Call {phone}</span>
-            <span className="text-xs font-normal">or Text</span>
-          </div>
-        </Button>
+        {trigger ? (
+          trigger
+        ) : (
+          <Button
+            size={size}
+            variant={variant}
+            className={className}
+            data-testid={testId}
+          >
+            <Phone className="w-4 h-4" />
+            <div className="flex flex-col items-center">
+              <span className="font-bold">Call {phone}</span>
+              <span className="text-xs font-normal">or Text</span>
+            </div>
+          </Button>
+        )}
       </PopoverTrigger>
-      <PopoverContent className="w-auto p-0 bg-transparent border-0 shadow-none" align="center" side="top" sideOffset={-55}>
+      <PopoverContent className="w-auto p-0 bg-transparent border-0 shadow-none" align="center" side="top" sideOffset={popupOffset}>
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -50,16 +57,16 @@ export default function CallActionPopover({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 8 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="flex gap-1"
+              className="flex justify-center"
             >
               <a href={`tel:${phoneNumber}`}>
                 <Button
                   size="lg"
                   variant="default"
-                  className="bg-accent text-accent-foreground border border-accent-border px-12 py-8 text-lg font-bold rounded-r-none"
+                  className="bg-accent text-accent-foreground border border-accent-border px-12 py-8 text-lg font-bold rounded-r-none w-[160px]"
                   data-testid="button-call-action"
                 >
-                  <Phone className="w-7 h-7" />
+                  <Phone className="w-7 h-7 mr-2" />
                   Call
                 </Button>
               </a>
@@ -67,10 +74,10 @@ export default function CallActionPopover({
                 <Button
                   size="lg"
                   variant="default"
-                  className="bg-accent text-accent-foreground border border-accent-border px-12 py-8 text-lg font-bold rounded-l-none"
+                  className="bg-accent text-accent-foreground border border-accent-border px-12 py-8 text-lg font-bold rounded-l-none w-[160px]"
                   data-testid="button-text-action"
                 >
-                  <MessageSquare className="w-7 h-7" />
+                  <MessageSquare className="w-7 h-7 mr-2" />
                   Text
                 </Button>
               </a>

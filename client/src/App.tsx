@@ -6,11 +6,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyCallBar from "@/components/StickyCallBar";
+import ScrollToTop from "@/components/ScrollToTop";
 import Home from "@/pages/Home";
 import JobFinder from "@/pages/JobFinder";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import FAQ from "@/pages/FAQ";
+import Testimonials from "@/pages/Testimonials";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -21,6 +23,7 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/faq" component={FAQ} />
+      <Route path="/testimonials" component={Testimonials} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -30,6 +33,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <ScrollToTop />
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-1">
@@ -43,5 +47,6 @@ function App() {
     </QueryClientProvider>
   );
 }
+
 
 export default App;

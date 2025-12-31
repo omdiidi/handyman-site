@@ -3,6 +3,7 @@ import ServicesOverview from "@/components/ServicesOverview";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Reviews from "@/components/Reviews";
 import ServiceAreas from "@/components/ServiceAreas";
+import ContactInfo from "@/components/ContactInfo";
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
       <Reviews />
       <WhyChooseUs />
       <ServiceAreas />
+      <ContactInfo />
     </div>
   );
 }
+
