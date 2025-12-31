@@ -14,3 +14,9 @@ vite.config.ts.*
 .env
 .config/replit/.semgrep/semgrep_rules.json
 .local/
+
+# ignore secrets + replit state
+.env
+.config/.semgrep/semgrep_rules.json
+.config/replit/.semgrep/semgrep_rules.json
+.local/
